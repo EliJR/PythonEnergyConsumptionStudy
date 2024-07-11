@@ -1,4 +1,4 @@
-# Does the programming language translator version influence the energy consumption programming languages
+# Empirical Analysis of Python’s Energy Impact: Evidence from Real Measurements.
 [Elisa Jiménez](https://orcid.org/0000-0002-2158-037X)
 
 [Alberto Gordillo](https://orcid.org/0000-0002-4742-173X)  
@@ -11,14 +11,16 @@
 
 
 ## Abstract
-This study builds upon the previous one carried out by [Pereira et al., 2021]( https://states.github.io/files/j2.pdf), in which 27 programming languages based on their energy efficiency were ranked under a software-based approach using RAPL software. The main motivation for this research is: 
-1. Corroborate the already existing ranking by adding a new point of empirical evidence.
-2. Assess the actual consumption of the PLs with a hardware-based approach versus the obtained previous study results which were based on estimations.
-3. Delve deeper into the analysis of energy consumption of PLs, as it is essential to consider not only the overall consumption of each language but also various hardware components of interest, such as the processor, graphics card, and hard drive.
+Background: Programming languages provide the notation for writing computer programs capable of granting our devices the desired functionalities. Even though they may seem intangible, the resulting programs involve an amount of energy consumption, which has an impact on the environment. Some studies on the consumption of programming languages indicate that while being one of the most widely used languages, Python is also one of the most demanding in terms of energy consumption.
+Aims: To provide developers using Python with a set of best practices on how to use it in the most energy-efficient way, this paper presents a study on whether the different ways of programming in Python have an impact on the energy consumption of the resulting programs.
+Method: We have studied the relationship between Python’s energy consumption and the fact that Python is a very versatile language that allows programs to be compiled and executed in many different ways.
+Results: From the results obtained in our study, there seems to be a clear relationship between software energy consumption at runtime and: (1) the use of interpreted or compiled Python; (2) the use of dynamically or statically typed variables.
+Conclusions: Compiling Python code is a good option if it is done using the py compile module. The use of interpreted code seems to improve energy consumption over compiling using Nuitka. The use of dynamically typed variables seems to improve
+considerably the graphics and processor energy consumption. In addition, we have observed that energy consumption is not always directly related to execution time. Sometimes, more power in less time increases consumption, due to the power required.
 
 ## What is this?
 
-This repository contains the source code of 6 algorithms implemented in 14 programming languages, which were obtained from [Computer Language Benchmark Game](https://benchmarksgame-team.pages.debian.net/benchmarksgame/).
+This repository contains the source code of 10 algorithms implemented in Python programming languages, which were obtained from [Computer Language Benchmark Game](https://benchmarksgame-team.pages.debian.net/benchmarksgame/).
 The repository also includes the resulting empirical results and some samples of the energy logs obtained from the hardware measuring instrument used in the study.
 
 ## How is structured?
