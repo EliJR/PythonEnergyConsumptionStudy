@@ -46,7 +46,7 @@ The code folder contains 14 subfolders, one for each programming language, and a
 	| <algorithm-1>
 	| ...
 	| <algorithm-i>
-| gen-input.sh
+
 
 ```
 
@@ -67,20 +67,18 @@ Taking the `SE1` software entity as an example, this is how the folder for the `
 Each algorithm sub-folder, included in a programming language folder, contains a `Makefile`.
 TThis is the file which shows how to perform the 2 main operations: *(1)* **compilation** and *(2)* **execution**.
 
-Basically, each `Makefile` **must** contain 2 rules, one for each operations:
+Basically, each `Makefile` **must** contain 1 rule:
 
 | Rule | Description |
 | -------- | -------- |
 | `run` | This rule specifies how the algorithm should be executed; It is used to test whether the algorithm runs with no errors and the output is the expected. 
 
-To illustrate this, an example of the `Makefile` for the `binary-trees` algorithm in the `C` language is:
+To illustrate this, an example of the `Makefile` for the `binary-trees` algorithm in the `SE1` is:
 
 ```Makefile
-compile:
-	/usr/bin/gcc -pipe -Wall -O3 -fomit-frame-pointer -march=native -fopenmp -D_FILE_OFFSET_BITS=64 -I/usr/include/apr-1.0 binarytrees.gcc-3.c -o binarytrees.gcc-3.gcc_run -lapr-1 -lgomp -lm
 
 run:
-	./binarytrees.gcc-3.gcc_run 21
+	python3.11 -OO binarytrees.cpython-311.py 21
 
 ```
 ## Empirical Results Folder
@@ -92,7 +90,6 @@ The empirical results folder includes all the information on the analysis of the
 
 It is structured as follows:
 
-```Java
 |<report>
 	| <EntityClass-1>@<Algorithm-1>.xls
 	| ...
@@ -151,8 +148,8 @@ Finally, the validation tests of the statistics can be found in testcases_compar
 
 ![](resources/comparison_example.PNG)
 
-#### Clustering folder
-Within the clustering folder there are two subfolders containing the cluster images for each algorithm and language. There is also the file ClustersByLanguageAlgorithm with the data to generate the clusters and scriptR.txt with the R code to generate them.
+#### Experimental-package folder
+It contains the results of experimental measurements that have been carried out on Numba and GraalPy. These measurements were finally not included in the study.
 
 #### Img folder
 The img folder contains the graphs of the overall consumption in the execution of each measurement performed. It also includes the box plots of each device for each test case.
