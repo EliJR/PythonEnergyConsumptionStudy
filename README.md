@@ -168,7 +168,6 @@ On the other hand, the GraalPy folder contains two folders (STV and DTV). Inside
 	| Numba
 		| <Code>
 		| <Results>
-
 	| GraalPy
 		| <Code>
 			| <DTV>
