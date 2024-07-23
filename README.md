@@ -163,7 +163,7 @@ Inside the folder, there is a folder for Numba and a folder for GraalPy.
 The Numba folder contains the results of measurements performed on a different version of the Mandelbrot algorithm. This algorithm was measured on Numba, Nuitka and the Python interpreter, with STV and with DTV.
 
 On the other hand, the GraalPy folder contains two folders (STV and DTV). Inside these folders are the results for each of the measured algorithms.
-
+```
 |<TestCase>
 	| Numba
 		| <Code>
@@ -180,6 +180,8 @@ On the other hand, the GraalPy folder contains two folders (STV and DTV). Inside
 					| versions_total.xls
 					| versions_comparison.xls
 			| <STV>
+
+```
 
 
 ### Sample Logs Folder
