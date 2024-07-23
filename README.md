@@ -124,7 +124,7 @@ It is structured as follows:
 		| ...
 	| <byType>
 		| ...
-```
+
 ### Report Folder
 The report folder contains 84 Excel files containing the analysis data. One for each test case named `<EntityClass>@<Algorithm>`. It also contains two files "testcases_total" and "versions_total" with the summary of the test case and version information respectively.
 As an example, the following images show the information of a test case.
